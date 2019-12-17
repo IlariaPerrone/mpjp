@@ -75,8 +75,20 @@ public class S58 {
 	 * @return a letter in [A, F]
 	 */
 	public static char vote(double percentile) {
-		// TODO
-		return 'F';
+		if (percentile > 90) {
+			return 'A';
+		} else if (percentile > 80) {
+			return 'B';
+		} else if (percentile > 70) {
+			return 'C';
+		} else if (percentile > 60) {
+			return 'D';
+		} else if (percentile > 50) {
+			return 'E';
+		} else {
+			return 'F';
+		}
+
 	}
 
 	/**
@@ -105,9 +117,22 @@ public class S58 {
 	 */
 	public static int[] sort(int a, int b, int c) {
 		int[] result = new int[3];
+		if (a < b) {
+			if (c < a) {
+				result[0] = c;
+				result[1] = a;
+				result[2] = b;
+			} else if (c > b) {
+				result[0] = a;
+				result[1] = b;
+				result[2] = c;
+			} else {
+				result[0] = a;
+				result[1] = c;
+				result[2] = b;
 
-		// TODO
-
+			}
+		}
 		return result;
 	}
 }
