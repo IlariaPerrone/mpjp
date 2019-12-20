@@ -7,5 +7,11 @@ public class Main {
 
 		System.out.println(poodle);
 		System.out.println(p2);
+
+		Poodle p3 = new Poodle("Pallino", 15, 30);
+		System.out.println(p3);
+
+		Dog dog = new Dog("Ettore", 18);
+		System.out.println(dog);
 	}
 }
